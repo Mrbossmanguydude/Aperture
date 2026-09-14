@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pt
+lichess_data/
+nnue_feature_cache/
+old_data/

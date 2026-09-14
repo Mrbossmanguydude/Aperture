@@ -57,7 +57,7 @@ def get_blocker_mask(pos: int, vectors):
             tempx += vector[0]
             tempy += vector[1]
 
-            if (0 < tempx < 7) and (0 < tempy < 7):
+            if (0 <= tempx <= 7) and (0 <= tempy <= 7):
                 curr_pos = 1 << (tempx + (tempy * 8))
                 positions.append(curr_pos)
                 blocker |= curr_pos
@@ -166,7 +166,7 @@ def save_magic_tables(filename="magic_tables.pkl"):
         pickle.dump({"rook": rook_data, "bishop": bishop_data}, file)
 
 if __name__ == "__main__":
-    save_magic_tables()
+    save_magic_tables(filename="magic_tables2.pkl")
 
 # Magic Table Generation
 #
